@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="灭门惨案电影专题页，提供经典悬疑惊悚片推荐、剧情解析、高分电影榜单及观影指南。涵盖家庭伦理、连环杀手、悬疑推理等类型影片。">
+    <meta name="keywords" content="灭门惨案电影,悬疑惊悚电影,高分恐怖片,家庭伦理片,电影推荐,悬疑片解析">
+    <title>灭门惨案电影-悬疑惊悚片推荐与深度解析指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #0f0f11;
+            --card-bg: #1a1a1d;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent-red: #c92a2a;
+            --accent-gold: #d4a017;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(15, 15, 17, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 15px 0;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(15,15,17,0.3), var(--bg-color)), 
+                        url('https://picsum.photos/seed/horror/1920/1080') center/cover no-repeat;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 16px;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.8);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: white;
+            box-shadow: 0 4px 15px rgba(201, 42, 42, 0.4);
+        }
+
+        .btn-primary:hover {
+            background-color: #a61e1e;
+            transform: translateY(-2px);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 40px 0;
+            border-bottom: 1px solid #222;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 24px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            position: relative;
+            padding-left: 16px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 4px;
+            height: 24px;
+            background-color: var(--accent-red);
+            border-radius: 2px;
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .section-more:hover {
+            color: var(--accent-red);
+        }
+
+        /* Grid Layouts */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .movie-card {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            border: 1px solid #333;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+            border-color: #444;
+        }
+
+        .card-poster {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            background-color: #2a2a2a;
+        }
+
+        .card-body {
+            padding: 16px;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .rating {
+            color: var(--accent-gold);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: #888;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            height: 2.7em;
+        }
+
+        /* Special Feature Section */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .feature-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .feature-text p {
+            color: var(--text-muted);
+            margin-bottom: 24px;
+        }
+
+        .feature-list li {
+            margin-bottom: 12px;
+            padding-left: 24px;
+            position: relative;
+            color: #ccc;
+        }
+
+        .feature-list li::before {
+            content: '•';
+            color: var(--accent-red);
+            position: absolute;
+            left: 0;
+            font-size: 1.5rem;
+            line-height: 0.8;
+        }
+
+        .feature-img {
+            width: 100%;
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+        }
+
+        /* Ranking Table */
+        .ranking-table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+        }
+
+        .ranking-table th, .ranking-table td {
+            padding: 16px 24px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        .ranking-table th {
+            background-color: #252529;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+        }
+
+        .ranking-table tr:hover {
+            background-color: #252529;
+        }
+
+        .rank-num {
+            font-weight: 700;
+            color: var(--accent-gold);
+            width: 40px;
+        }
+
+        .rank-1 { color: #ffd700; font-size: 1.2rem; }
+        .rank-2 { color: #c0c0c0; font-size: 1.1rem; }
+        .rank-3 { color: #cd7f32; font-size: 1.1rem; }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--card-bg);
+            border-radius: var(--radius);
+            margin-bottom: 16px;
+            border: 1px solid #333;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--text-muted);
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            padding: 0 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-muted);
+            line-height: 1.8;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a0a0c;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-info p {
+            color: var(--text-muted);
+            margin-top: 16px;
+            font-size: 0.9rem;
+            max-width: 400px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-red);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 16px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-info p {
+                margin: 16px auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">Mystery<span>View</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">高分榜单</a></li>
+                    <li><a href="#">悬疑推理</a></li>
+                    <li><a href="#">家庭伦理</a></li>
+                    <li><a href="#">影评专栏</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-bg"></div>
+            <div class="hero-content">
+                <h1>探索极致悬疑：灭门惨案电影深度解析</h1>
+                <p>从家庭伦理的崩塌到连环杀手的心理博弈，为您精选最具冲击力的灭门题材影片与观影指南。</p>
+                <a href="#ranking" class="btn btn-primary">查看高分榜单</a>
+            </div>
+        </section>
+
+        <!-- Feature/Intro Section -->
+        <section class="container">
+            <div class="feature-grid">
+                <div class="feature-text">
+                    <h2>什么是“灭门”题材电影？</h2>
+                    <p>“灭门”题材通常指以家庭或特定群体遭遇惨烈暴力、遭遇灭顶之灾为故事核心的影视作品。这类电影往往结合了悬疑推理、惊悚恐怖与犯罪剧情，探讨人性在极端环境下的善恶抉择。</p>
+                    <ul class="feature-list">
+                        <li><strong>核心冲突：</strong> 谁是凶手？动机是什么？</li>
+                        <li><strong>情感张力：</strong> 复仇、守护、背叛与绝望。</li>
+                        <li><strong>视觉风格：</strong> 黑暗、压抑、冷峻的色调运用。</li>
+                    </ul>
+                </div>
+                <div class="feature-media">
+                    <img src="https://picsum.photos/seed/cinema/600/400" alt="电影分析示意图" class="feature-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Top Ranking Section -->
+        <section id="ranking">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">年度高分灭门惨案电影</h2>
+                    <a href="#" class="section-more">查看完整榜单 &rarr;</a>
+                </div>
+                
+                <table class="ranking-table">
+                    <thead>
+                        <tr>
+                            <th width="80">排名</th>
+                            <th>影片名称</th>
+                            <th width="120">类型</th>
+                            <th width="100">评分</th>
+                            <th width="250">简介</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="rank-num rank-1">1</td>
+                            <td><strong>复仇之魂</strong></td>
+                            <td>犯罪/惊悚</td>
+                            <td class="rating">9.2</td>
+                            <td>一个破碎的家庭在遭遇灭门惨剧后，幸存者如何利用法律与心理战术展开漫长复仇。</td>
+                        </tr>
+                        <tr>
+                            <td class="rank-num rank-2">2</td>
+                            <td><strong>午夜屠夫</strong></td>
+                            <td>恐怖/悬疑</td>
+                            <td class="rating">8.8</td>
+                            <td>连环杀手在暴雨夜闯入小镇，制造了一系列令人毛骨悚然的灭门惨案。</td>
+                        </tr>
+                        <tr>
+                            <td class="rank-num rank-3">3</td>
+                            <td><strong>看不见的客人</strong></td>
+                            <td>推理/剧情</td>
+                            <td class="rating">8.9</td>
+                            <td>为了掩盖灭门真相，主人与客人展开了一场关于谎言与真相的极限博弈。</td>
+                        </tr>
+                        <tr>
+                            <td class="rank-num">4</td>
+                            <td><strong>黑暗中的访客</strong></td>
+                            <td>惊悚/剧情</td>
+                            <td class="rating">8.5</td>
+                            <td>看似完美的别墅里，隐藏着不为人知的秘密，夜幕降临，灭门阴影笼罩每个人。</td>
+                        </tr>
+                        <tr>
+                            <td class="rank-num">5</td>
+                            <td><strong>深渊凝视</strong></td>
+                            <td>心理/犯罪</td>
+                            <td class="rating">8.4</td>
+                            <td>深入剖析连环杀手心理，探讨社会环境如何一步步将普通人推向灭门的深渊。</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Movie Grid Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">热门推荐</h2>
+                <a href="#" class="section-more">更多推荐 &rarr;</a>
+            </div>
+            <div class="movie-grid">
+                <!-- Movie Card 1 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie1/300/450" alt="电影海报" class="card-poster">
+                    <div class="card-body">
+                        <h3 class="card-title">血色庄园</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span class="rating">★ 7.8</span>
+                        </div>
+                        <p class="card-desc">古老的庄园里，五个陌生人被邀请参加一场神秘的晚宴，随后却接连遭遇离奇死亡，真相令人胆寒。</p>
+                    </div>
+                </article>
+
+                <!-- Movie Card 2 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie2/300/450" alt="电影海报" class="card-poster">
+                    <div class="card-body">
+                        <h3 class="card-title">迷雾追踪</h3>
+                        <div class="card-meta">
+                            <span>2022</span>
+                            <span class="rating">★ 8.1</span>
+                        </div>
+                        <p class="card-desc">警方在深山密林中发现了一处废弃的房屋，屋内满地狼藉，只有一家三口的尸体，案件扑朔迷离。</p>
+                    </div>
+                </article>
+
+                <!-- Movie Card 3 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie3/300/450" alt="电影海报" class="card-poster">
+                    <div class="card-body">
+                        <h3 class="card-title">沉默的证人</h3>
+                        <div class="card-meta">
+                            <span>2021</span>
+                            <span class="rating">★ 7.5</span>
+                        </div>
+                        <p class="card-desc">一场灭门惨案后，唯一的目击者选择隐瞒真相，却在多年后开始被神秘人敲诈勒索。</p>
+                    </div>
+                </article>
+
+                <!-- Movie Card 4 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/movie4/300/450" alt="电影海报" class="card-poster">
+                    <div class="card-body">
+                        <h3 class="card-title">最后通牒</h3>
+                        <div class="card-meta">
+                            <span>2023</span>
+                            <span class="rating">★ 8.3</span>
+                        </div>
+                        <p class="card-desc">凶手在作案后留下血书，向警方发出挑战，一场关于时间与心理的生死竞速就此展开。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题解答</h2>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">观看“灭门惨案”电影需要注意什么？</div>
+                    <div class="faq-answer">
+                        <p>这类电影通常包含暴力场面、血腥镜头以及压抑的心理氛围。建议在心理承受能力允许的情况下观看，避免深夜独自观看引发不适。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">这类电影通常有哪些结局？</div>
+                    <div class="faq-answer">
+                        <p>结局通常分为几种：凶手被绳之以法、凶手逍遥法外（开放式结局）、或者反转揭示凶手竟是意想不到的人（如家庭成员）。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">有哪些经典的家庭伦理灭门片？</div>
+                    <div class="faq-answer">
+                        <p>经典作品包括《复仇》、《消失的爱人》以及多部韩国惊悚片，它们往往将家庭矛盾与犯罪动机紧密结合。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <a href="#" class="logo">Mystery<span>View</span></a>
+                    <p>专注于为悬疑与惊悚片爱好者提供深度影评、高分榜单及观影指南。我们致力于还原电影中最黑暗、最迷人的角落。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">最新上映</a></li>
+                        <li><a href="#">高分榜单</a></li>
+                        <li><a href="#">影评专栏</a></li>
+                        <li><a href="#">导演专题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">网站简介</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 MysteryView 悬疑影库. All rights reserved. 本站内容仅供学习交流，不用于商业用途。
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                item.querySelector('.faq-question').addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
