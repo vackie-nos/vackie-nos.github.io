@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="家庭自制泡菜做法大全，提供韩式辣白菜、四川泡菜、酸甜黄瓜等经典配方。从选材、腌制到发酵技巧，手把手教你在家制作健康美味的泡菜。">
+    <meta name="keywords" content="家庭自制泡菜的做法,自制泡菜,泡菜配方,韩式辣白菜,四川泡菜">
+    <title>家庭自制泡菜的做法-健康美味的手工腌制指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b6b;
+            --primary-dark: #e05454;
+            --secondary-color: #feca57;
+            --text-main: #2d3436;
+            --text-light: #636e72;
+            --bg-body: #f7f9fc;
+            --bg-card: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            --spacing-unit: 1.5rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--bg-card);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-main);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff5f5 0%, #fff 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--text-main);
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 4rem;
+        }
+
+        .section-header {
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 1rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--text-main);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        /* Ingredients Grid */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            height: 180px;
+            background-color: #eee;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background-color: #fff0f0;
+            color: var(--primary-color);
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .card-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            border-top: 1px solid #f1f1f1;
+            padding-top: 1rem;
+        }
+
+        .time-badge {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        /* Tips Section */
+        .tips-container {
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .tip-item {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tip-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .tip-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #fff0f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .tip-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .tip-content p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* FAQ Section */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+        }
+
+        .faq-question {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2d3436;
+            color: #dfe6e9;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col ul li a {
+            color: #b2bec3;
+            transition: color 0.3s;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid #636e72;
+            color: #636e72;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10H12V2z"></path><path d="M12 12 2.1 12.05"></path><path d="M12 12 12 22"></path></svg>
+                泡菜工坊
+            </div>
+            <nav class="nav-links">
+                <a href="#recipes">经典食谱</a>
+                <a href="#tips">腌制技巧</a>
+                <a href="#faq">常见问题</a>
+                <a href="#about">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>家庭自制泡菜的做法 <br><span>健康美味，零添加</span></h1>
+            <p>掌握正确的选材、清洗、腌制和发酵技巧，在家轻松复刻餐厅级泡菜风味，让餐桌更丰富。</p>
+            <a href="#recipes" class="cta-button">开始制作</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- 常见问题回答区 -->
+        <section id="intro">
+            <div class="section-header">
+                <h2>为什么要在家自制泡菜？</h2>
+                <p>市售泡菜往往含有防腐剂和过多的盐分，自制泡菜不仅能严格控制盐度和添加剂，还能通过自然发酵产生益生菌，对肠道健康有益。</p>
+            </div>
+        </section>
+
+        <!-- 食谱推荐区 -->
+        <section id="recipes">
+            <div class="section-header">
+                <h2>热门家庭自制泡菜做法</h2>
+                <p>从经典的韩式辣白菜到清爽的四川泡菜，选择适合你口味和气候的做法。</p>
+            </div>
+            
+            <div class="grid-container">
+                <!-- Recipe 1 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/kimchi/400/300" alt="韩式辣白菜">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">经典推荐</span>
+                        <h3 class="card-title">韩式辣白菜</h3>
+                        <p class="card-desc">口感脆嫩，微酸微辣。适合冬季制作，发酵时间适中，是拌饭和汤类的最佳伴侣。</p>
+                        <div class="card-footer">
+                            <span class="time-badge">🕒 30分钟</span>
+                            <span>🔥 辣味</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Recipe 2 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/pickles/400/300" alt="四川泡菜">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">开胃爽口</span>
+                        <h3 class="card-title">四川泡菜</h3>
+                        <p class="card-desc">使用老盐水发酵，色泽金黄，风味浓郁。萝卜、豇豆、胡萝卜都是不错的选择。</p>
+                        <div class="card-footer">
+                            <span class="time-badge">🕒 24小时</span>
+                            <span>🥬 鲜香</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Recipe 3 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/cucumber/400/300" alt="酸甜黄瓜">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">新手入门</span>
+                        <h3 class="card-title">酸甜黄瓜</h3>
+                        <p class="card-desc">做法简单，口感清脆。加入白醋、白糖和少许盐，冷藏数小时即可食用。</p>
+                        <div class="card-footer">
+                            <span class="time-badge">🕒 4小时</span>
+                            <span>🥒 清爽</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Recipe 4 -->
+                <article class="card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/sauerkraut/400/300" alt="德国酸卷心菜">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-tag">风味独特</span>
+                        <h3 class="card-title">酸卷心菜</h3>
+                        <p class="card-desc">将卷心菜切丝，撒上盐和香料，压实发酵。适合制作热汤或作为配菜。</p>
+                        <div class="card-footer">
+                            <span class="time-badge">🕒 48小时</span>
+                            <span>🥬 酸爽</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 关键技巧区 -->
+        <section id="tips">
+            <div class="section-header">
+                <h2>家庭自制泡菜的核心技巧</h2>
+                <p>掌握这几点，成功率提升 90%。</p>
+            </div>
+            
+            <div class="tips-container">
+                <div class="tip-item">
+                    <div class="tip-icon">1</div>
+                    <div class="tip-content">
+                        <h3>严格控水与清洗</h3>
+                        <p>蔬菜表面必须完全沥干水分，否则容易滋生杂菌导致泡菜变质。清洗时建议使用盐水浸泡以去除农残。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">2</div>
+                    <div class="tip-content">
+                        <h3>容器选择与消毒</h3>
+                        <p>使用无油无水的玻璃罐或陶瓷罐。制作前用开水烫洗或酒精消毒，确保环境无菌。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">3</div>
+                    <div class="tip-content">
+                        <h3>温度与密封</h3>
+                        <p>发酵初期室温保持在 15-25 度，避免阳光直射。密封时留出微小缝隙或使用透气盖，防止气体爆炸，同时让有益菌呼吸。</p>
+                    </div>
+                </div>
+                <div class="tip-item">
+                    <div class="tip-icon">4</div>
+                    <div class="tip-content">
+                        <h3>观察发酵状态</h3>
+                        <p>初期会有气泡产生，表面出现白膜需及时撇除。闻到浓郁的酸香味且质地变软时即可食用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 常见问题 FAQ -->
+        <section id="faq">
+            <div class="section-header">
+                <h2>家庭自制泡菜常见问题</h2>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">❓ 泡菜长毛了还能吃吗？</div>
+                    <div class="faq-answer">如果表面出现少量白色菌丝（这是乳酸菌生长的正常现象），可以用干净勺子撇除，并加一点高度白酒或盐，通常可以继续保存。但如果出现绿色、黑色霉菌或发臭，请直接丢弃。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">❓ 不放冰箱可以吗？</div>
+                    <div class="faq-answer">夏季或室温较高时，建议放入冰箱冷藏发酵，可以减缓发酵速度，防止过酸或变质。冬季室温较低时，置于阴凉处即可。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">❓ 泡菜水可以重复使用吗？</div>
+                    <div class="faq-answer">老泡菜水（原汤）是发酵的核心，保存得当可以循环使用，且时间越久风味越好。每次新加入蔬菜时，需根据蔬菜量适当补充盐和糖。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>泡菜工坊</h4>
+                <p style="color: #b2bec3; font-size: 0.9rem;">专注于分享家庭自制泡菜的做法与技巧，致力于推广健康、美味的传统发酵美食文化。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#recipes">经典食谱</a></li>
+                    <li><a href="#tips">腌制技巧</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>分类推荐</h4>
+                <ul>
+                    <li><a href="#">韩式料理</a></li>
+                    <li><a href="#">川味小吃</a></li>
+                    <li><a href="#">蔬菜腌制</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 泡菜工坊 - 家庭自制泡菜的做法指南. All Rights Reserved.
+        </div>
+    </footer>
+
+</body>
+</html>
