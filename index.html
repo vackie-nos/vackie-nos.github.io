@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="F1赛车游戏大全 - 提供最真实的F1模拟赛车体验，包含F1 2024、F1 23、F1 22等最新赛车游戏评测、实机演示、操作指南及下载资源推荐。">
+    <meta name="keywords" content="F1赛车游戏, F1游戏, 模拟赛车, 赛车游戏下载, F1 2024">
+    <title>F1赛车游戏-真实模拟赛车体验与游戏下载指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e10600; /* F1 Red */
+            --secondary-color: #1a1a1a;
+            --accent-color: #ffb81c; /* Checkered flag hint */
+            --bg-color: #0f0f0f;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: rgba(15, 15, 15, 0.95);
+            border-bottom: 2px solid var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-main);
+        }
+
+        .cta-btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .cta-btn:hover {
+            background-color: #c00;
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), 
+                        url('https://picsum.photos/seed/f1carrace/1920/1080') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(circle at center, transparent 0%, var(--bg-color) 90%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-transform: uppercase;
+        }
+
+        .hero h1 span {
+            color: var(--primary-color);
+            display: block;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ddd;
+            margin-bottom: 40px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background-color: #c00;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            transition: all 0.3s;
+        }
+
+        .btn-secondary:hover {
+            border-color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Titles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-muted);
+        }
+
+        .view-all {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Game Grid */
+        .game-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .game-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: var(--primary-color);
+        }
+
+        .card-image {
+            position: relative;
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .game-card:hover .card-image img {
+            transform: scale(1.05);
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .card-content {
+            padding: 20px;
+        }
+
+        .card-content h3 {
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+
+        .card-content .meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-content p {
+            font-size: 0.9rem;
+            color: #ccc;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn-card {
+            flex: 1;
+            padding: 8px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .btn-download {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn-download:hover {
+            background-color: #444;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: #151515;
+            padding: 60px 20px;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 30px;
+            border: 1px solid #2a2a2a;
+            border-radius: 12px;
+            background: #1a1a1a;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .feature-item h3 {
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .feature-item p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* Comparison Table */
+        .comparison-wrapper {
+            overflow-x: auto;
+            margin-bottom: 80px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #333;
+        }
+
+        th {
+            background-color: #1a1a1a;
+            color: var(--text-muted);
+            font-weight: 600;
+        }
+
+        td {
+            background-color: var(--card-bg);
+        }
+
+        .check { color: #00e676; }
+        .cross { color: #ff5252; }
+
+        /* FAQ */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #333;
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            width: 100%;
+            text-align: left;
+            background: none;
+            border: none;
+            color: white;
+            padding: 20px 0;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            color: var(--text-muted);
+        }
+
+        .faq-answer p {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        .faq-item:not(.active) .faq-question::after {
+            content: '+';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            padding: 60px 20px 30px;
+            border-top: 1px solid #222;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid #1a1a1a;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <span>⚡</span> F1游戏中心
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="active">游戏库</a>
+                <a href="#">模拟驾驶</a>
+                <a href="#">硬件评测</a>
+                <a href="#">赛车技巧</a>
+                <a href="#">下载专区</a>
+            </nav>
+            <a href="#" class="cta-btn">立即下载</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>F1赛车游戏<br><span>极速狂飙，身临其境</span></h1>
+                <p>体验F1官方授权的真实驾驶快感。从F1 2024到经典模拟赛车，精选全球最热门的F1赛车游戏，助你成为赛道王者。</p>
+                <div class="hero-buttons">
+                    <a href="#latest-games" class="btn-primary">浏览最新游戏</a>
+                    <a href="#guide" class="btn-secondary">新手操作指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest Games -->
+        <section class="container" id="latest-games">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>最新热门F1游戏</h2>
+                    <p>2024年最值得体验的F1赛车游戏推荐</p>
+                </div>
+                <a href="#" class="view-all">查看全部游戏 &rarr;</a>
+            </div>
+
+            <div class="game-grid">
+                <!-- Game 1 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="badge">年度最佳</span>
+                        <img src="https://picsum.photos/seed/f12024/400/300" alt="F1 2024 游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3>F1 2024</h3>
+                        <div class="meta">
+                            <span>EA Sports</span>
+                            <span>PC / PS5 / XSX</span>
+                        </div>
+                        <p>年度力作，全新地下赛车模式，更加真实的物理引擎，体验2024赛季最新赛车配置。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card btn-download">下载</a>
+                            <a href="#" class="btn-card btn-download">评测</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 2 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/f12023/400/300" alt="F1 23 游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3>F1 23</h3>
+                        <div class="meta">
+                            <span>EA Sports</span>
+                            <span>PC / PS4 / PS5</span>
+                        </div>
+                        <p>包含备受好评的“My Team”生涯模式，支持4K HDR画面，为新手提供辅助驾驶系统。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card btn-download">下载</a>
+                            <a href="#" class="btn-card btn-download">评测</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 3 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <span class="badge">模拟之王</span>
+                        <img src="https://picsum.photos/seed/raceroom/400/300" alt="Raceroom 游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3>Raceroom Racing Experience</h3>
+                        <div class="meta">
+                            <span>Studio 397</span>
+                            <span>PC</span>
+                        </div>
+                        <p>硬核模拟赛车首选，拥有超过100款真实赛车，物理手感在模拟器中名列前茅。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card btn-download">下载</a>
+                            <a href="#" class="btn-card btn-download">评测</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Game 4 -->
+                <article class="game-card">
+                    <div class="card-image">
+                        <img src="https://picsum.photos/seed/assetto/400/300" alt="Assetto Corsa 游戏封面">
+                    </div>
+                    <div class="card-content">
+                        <h3>Assetto Corsa</h3>
+                        <div class="meta">
+                            <span>Kunos Simulazioni</span>
+                            <span>PC</span>
+                        </div>
+                        <p>以物理真实著称，拥有海量改装模组和高质量赛道，是社区模组制作的热门平台。</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn-card btn-download">下载</a>
+                            <a href="#" class="btn-card btn-download">评测</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🏎️</div>
+                    <h3>真实物理引擎</h3>
+                    <p>基于真实空气动力学和轮胎抓地力模拟，每一圈都需要精确的操作和完美的入弯。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎧</div>
+                    <h3>沉浸式音效</h3>
+                    <p>收录官方F1现场广播、引擎轰鸣声和雨刮器声，让驾驶体验更加震撼。</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🤖</div>
+                    <h3>AI 智能对手</h3>
+                    <p>先进的AI算法，能够模仿真实车手风格，提供极具挑战性的单人或多人竞速。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Table -->
+        <section class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>热门游戏对比</h2>
+                    <p>选择最适合你的F1赛车游戏</p>
+                </div>
+            </div>
+            <div class="comparison-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>游戏名称</th>
+                            <th>操作难度</th>
+                            <th>画面表现</th>
+                            <th>单机内容</th>
+                            <th>模拟程度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>F1 2024</td>
+                            <td>中等</td>
+                            <td class="check">优秀 (4K HDR)</td>
+                            <td class="check">丰富 (生涯/地下)</td>
+                            <td class="cross">中等 (偏向娱乐)</td>
+                        </tr>
+                        <tr>
+                            <td>Raceroom</td>
+                            <td>高</td>
+                            <td class="check">优秀</td>
+                            <td class="cross">中等 (以改装为主)</td>
+                            <td class="check">极高 (硬核)</td>
+                        </tr>
+                        <tr>
+                            <td>Assetto Corsa</td>
+                            <td>极高</td>
+                            <td class="check">良好 (依赖显卡)</td>
+                            <td class="cross">较少 (需模组)</td>
+                            <td class="check">极高 (物理导向)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="container faq-section" id="guide">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>新手操作指南</h2>
+                    <p>F1赛车游戏常见问题与技巧解答</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">F1赛车游戏需要什么样的电脑配置？</button>
+                <div class="faq-answer">
+                    <p>运行F1 2024等主流游戏，建议CPU为Intel i5/Ryzen 5以上，显卡推荐NVIDIA RTX 3060或AMD RX 6600以上，内存16GB起。如果追求高帧率或4K画质，建议RTX 4070及以上配置。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">如何调整游戏难度以适应不同水平？</button>
+                <div class="faq-answer">
+                    <p>新手建议在设置中开启“驾驶辅助”，包括辅助刹车、牵引力控制和转向辅助。随着熟练度提升，可以逐步关闭这些辅助，并在“AI难度”设置中从“普通”开始挑战。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">玩F1赛车游戏推荐什么外设？</button>
+                <div class="faq-answer">
+                    <p>为了获得最佳体验，强烈推荐使用方向盘（如Logitech G29/G923、Fanatec）和踏板。方向盘能提供真实的力反馈，让你感受路面摩擦力和碰撞时的震动。</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">游戏中的“My Team”模式是什么？</button>
+                <div class="faq-answer">
+                    <p>My Team是F1系列游戏的核心模式，玩家可以创建自己的车队，管理预算、招募车手和工程师，从车队经理的角度参与整个赛季的运营与竞争。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="margin-bottom: 15px;">
+                    <span>⚡</span> F1游戏中心
+                </div>
+                <p style="color: #777; font-size: 0.9rem;">
+                    专注F1赛车游戏资讯与资源分享，为赛车爱好者提供最专业的游戏评测与下载服务。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>游戏分类</h4>
+                <ul>
+                    <li><a href="#">官方F1系列</a></li>
+                    <li><a href="#">模拟驾驶</a></li>
+                    <li><a href="#">街机赛车</a></li>
+                    <li><a href="#">赛车游戏合集</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>支持与帮助</h4>
+                <ul>
+                    <li><a href="#">游戏下载</a></li>
+                    <li><a href="#">配置要求</a></li>
+                    <li><a href="#">常见问题</a></li>
+                    <li><a href="#">联系站长</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关注我们</h4>
+                <ul>
+                    <li><a href="#">官方微博</a></li>
+                    <li><a href="#">微信公众号</a></li>
+                    <li><a href="#">Bilibili</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 F1赛车游戏中心. All Rights Reserved. 本站资源仅供学习交流，请支持正版游戏。</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+              </html>
