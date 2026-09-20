@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="向着炮火前进全集在线阅读平台，提供抗战题材军事小说《向着炮火前进》全集章节，包含角色介绍、剧情解析及阅读指南。">
+    <meta name="keywords" content="向着炮火前进全集,抗战小说,军事小说,向着炮火前进,网络小说">
+    <title>向着炮火前进全集 - 抗战军事小说在线阅读指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --secondary-color: #DAA520;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-body: #f4f4f4;
+            --bg-card: #ffffff;
+            --border-radius: 8px;
+            --container-width: 1200px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-dark);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 20px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-dark);
+        }
+
+        nav a.active, nav a:hover {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+        }
+
+        .search-box input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-box button {
+            padding: 8px 15px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #5c0000 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-tags span {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin: 0 5px;
+            font-size: 0.9rem;
+        }
+
+        .btn-read {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--text-dark);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-top: 20px;
+        }
+
+        .btn-read:hover {
+            background-color: #cd853f;
+            transform: translateY(-2px);
+        }
+
+        /* Section Titles */
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .section-title h2 {
+            font-size: 1.8rem;
+            color: var(--text-dark);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+
+        .section-title h2::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+        }
+
+        /* Book Info Cards */
+        .book-intro {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+
+        .cover-placeholder {
+            width: 100%;
+            aspect-ratio: 2/3;
+            background-color: #ddd;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cover-placeholder::before {
+            content: "⚔️";
+            font-size: 5rem;
+            opacity: 0.3;
+        }
+
+        .book-details h3 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .book-meta {
+            display: flex;
+            gap: 20px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .meta-item strong {
+            color: var(--text-dark);
+        }
+
+        .book-desc {
+            margin-bottom: 20px;
+        }
+
+        .book-desc p {
+            margin-bottom: 10px;
+            text-align: justify;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-num {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Chapter List */
+        .chapter-list {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        .chapter-header {
+            background-color: #f9f9f9;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-tabs {
+            display: flex;
+            overflow-x: auto;
+            background: #fff;
+            border-bottom: 1px solid #eee;
+            scrollbar-width: thin;
+        }
+
+        .chapter-tab {
+            padding: 15px 20px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            white-space: nowrap;
+            color: var(--text-light);
+        }
+
+        .chapter-tab:hover {
+            color: var(--primary-color);
+        }
+
+        .chapter-tab.active {
+            border-bottom-color: var(--primary-color);
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        .chapter-list-content {
+            padding: 0;
+        }
+
+        .chapter-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background 0.2s;
+        }
+
+        .chapter-item:hover {
+            background-color: #fafafa;
+        }
+
+        .chapter-title {
+            flex: 1;
+        }
+
+        .chapter-title a {
+            font-size: 1rem;
+        }
+
+        .chapter-date {
+            color: #999;
+            font-size: 0.85rem;
+            margin-left: 15px;
+        }
+
+        .chapter-tag {
+            font-size: 0.75rem;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 10px;
+            color: #fff;
+        }
+
+        .tag-new { background-color: var(--primary-color); }
+        .tag-vip { background-color: #d4af37; }
+
+        /* Character Section */
+        .character-section {
+            margin: 60px 0;
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .character-card {
+            background: var(--bg-card);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .character-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .char-avatar {
+            width: 80px;
+            height: 80px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        .char-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .char-role {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: var(--bg-card);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            margin: 60px 0;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+            padding-left: 20px;
+            border-left: 3px solid var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #ccc;
+            padding: 40px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+            
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .book-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                📖 <span>烽火书城</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">分类</a></li>
+                    <li><a href="#">排行榜</a></li>
+                    <li><a href="#">书架</a></li>
+                </ul>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索小说...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>向着炮火前进</h1>
+                <p>一部热血沸腾的抗战军事小说，讲述侦察连连长雷铁与战友们在枪林弹雨中守护家园的传奇故事。</p>
+                <div class="hero-tags">
+                    <span>热血</span>
+                    <span>抗战</span>
+                    <span>军事</span>
+                    <span>兄弟情</span>
+                </div>
+                <a href="#read-section" class="btn-read">立即阅读全集</a>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Book Info -->
+            <section class="book-intro">
+                <div class="cover-placeholder" title="小说封面">
+                    <!-- Icon representing a book/weapon -->
+                </div>
+                <div class="book-details">
+                    <h3>向着炮火前进</h3>
+                    <div class="book-meta">
+                        <span class="meta-item">作者：<strong>烽火戏诸侯</strong></span>
+                        <span class="meta-item">状态：<strong>连载中</strong></span>
+                        <span class="meta-item">字数：<strong>120万字+</strong></span>
+                        <span class="meta-item">分类：<strong>军事历史</strong></span>
+                    </div>
+                    <div class="book-desc">
+                        <p>本书以独特的视角切入抗日战争时期，塑造了侦察连连长雷铁这一深入人心的英雄形象。雷铁凭借其过人的胆识和精湛的枪法，带领“铁血侦察连”在敌后进行了一系列惊心动魄的战斗。</p>
+                        <p>故事不仅展现了战争的残酷与壮烈，更着重刻画了战火中淬炼出的兄弟情义与家国情怀。面对装备精良的日军，主角们利用地形优势，以智取胜，向着炮火前进，誓死保卫每一寸国土。</p>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-num">128</div>
+                            <div class="stat-label">总章节</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">50w+</div>
+                            <div class="stat-label">总点击</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">9.2</div>
+                            <div class="stat-label">评分</div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 20px;">
+                        <button style="padding: 10px 25px; background-color: var(--primary-color); color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 1rem;">加入书架</button>
+                        <button style="padding: 10px 25px; background-color: transparent; color: var(--primary-color); border: 1px solid var(--primary-color); border-radius: 4px; cursor: pointer; font-size: 1rem; margin-left: 10px;">分享</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Character Section -->
+            <section class="character-section">
+                <div class="section-title">
+                    <h2>主要角色</h2>
+                </div>
+                <div class="character-grid">
+                    <div class="character-card">
+                        <div class="char-avatar">🔫</div>
+                        <div class="char-name">雷铁</div>
+                        <div class="char-role">主角 / 侦察连连长</div>
+                    </div>
+                    <div class="character-card">
+                        <div class="char-avatar">⚔️</div>
+                        <div class="char-name">王二麻</div>
+                        <div class="char-role">主角 / 狙击手</div>
+                    </div>
+                    <div class="character-card">
+                        <div class="char-avatar">💊</div>
+                        <div class="char-name">赵铁柱</div>
+                        <div class="char-role">主角 / 重机枪手</div>
+                    </div>
+                    <div class="character-card">
+                        <div class="char-avatar">🐴</div>
+                        <div class="char-name">黑旋风</div>
+                        <div class="char-role">战马 / 辅助角色</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chapters Section -->
+            <section id="read-section" class="chapter-list">
+                <div class="chapter-header">
+                    <span>章节目录</span>
+                    <span>更新至第 128 章</span>
+                </div>
+                
+                <div class="chapter-tabs">
+                    <div class="chapter-tab active">最新章节</div>
+                    <div class="chapter-tab">热门章节</div>
+                    <div class="chapter-tab">第一卷</div>
+                    <div class="chapter-tab">第二卷</div>
+                    <div class="chapter-tab">第三卷</div>
+                </div>
+
+                <div class="chapter-list-content">
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第128章 突围计划</a>
+                            <span class="chapter-tag tag-new">最新</span>
+                        </div>
+                        <span class="chapter-date">2023-10-15</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第127章 激战县城</a>
+                        </div>
+                        <span class="chapter-date">2023-10-12</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第126章 惊天反转</a>
+                            <span class="chapter-tag tag-vip">VIP</span>
+                        </div>
+                        <span class="chapter-date">2023-10-10</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第125章 剑指敌营</a>
+                        </div>
+                        <span class="chapter-date">2023-10-08</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第124章 深入虎穴</a>
+                        </div>
+                        <span class="chapter-date">2023-10-05</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第123章 暗流涌动</a>
+                        </div>
+                        <span class="chapter-date">2023-10-01</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第122章 奇袭成功</a>
+                        </div>
+                        <span class="chapter-date">2023-09-28</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第121章 陷阱</a>
+                        </div>
+                        <span class="chapter-date">2023-09-25</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第120章 意外的援军</a>
+                        </div>
+                        <span class="chapter-date">2023-09-22</span>
+                    </div>
+                    <div class="chapter-item">
+                        <div class="chapter-title">
+                            <a href="#">第119章 兄弟重逢</a>
+                        </div>
+                        <span class="chapter-date">2023-09-20</span>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; padding: 20px;">
+                    <button style="padding: 8px 20px; background: #f0f0f0; border: none; border-radius: 4px; cursor: pointer;">加载更多章节</button>
+                </div>
+            </section>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <div class="section-title">
+                    <h2>阅读指南</h2>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">《向着炮火前进》小说在哪里可以看全集？</div>
+                    <div class="faq-answer">本站提供《向着炮火前进》全集在线阅读服务，您可以点击上方章节目录直接跳转阅读最新章节。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">小说的作者是谁？</div>
+                    <div class="faq-answer">小说《向着炮火前进》的作者为烽火戏诸侯（注：此处为示例作者名，实际请以平台信息为准）。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何订阅更新提醒？</div>
+                    <div class="faq-answer">您可以点击“加入书架”按钮，后续有新章节发布时系统会自动通知您。</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p>致力于为读者提供最优质的小说阅读体验，涵盖军事、玄幻、言情等多种题材。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">抗战历史</a></li>
+                        <li><a href="#">都市异能</a></li>
+                        <li><a href="#">古代言情</a></li>
+                        <li><a href="#">科幻未来</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>帮助中心</h4>
+                    <ul>
+                        <li><a href="#">用户注册</a></li>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系方式</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 烽火书城. All Rights Reserved. 仅供学习交流使用，请支持正版。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 简单的交互逻辑：标签切换
+        document.querySelectorAll('.chapter-tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // 移除所有 active 类
+                document.querySelectorAll('.chapter-tab').forEach(t => t.classList.remove('active'));
+                // 给当前点击的添加 active 类
+                this.classList.add('active');
+                
+                // 模拟加载不同内容（此处仅为视觉反馈）
+                const contentTitle = this.textContent;
+                console.log("切换到标签: " + contentTitle);
+            });
+        });
+
+        // 简单的交互逻辑：搜索框回车
+        const searchInput = document.querySelector('.search-box input');
+        const searchBtn = document.querySelector('.search-box button');
+        
+        function performSearch() {
+            if(searchInput.value.trim() !== "") {
+                alert("正在搜索: " + searchInput.value);
+            }
+        }
+        
+        searchBtn.addEventListener('click', performSearch);
+        searchInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performSearch();
+            }
+        });
+    </script>
+</body>
+                                                  </html>
